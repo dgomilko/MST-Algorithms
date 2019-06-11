@@ -1,3 +1,4 @@
+/usr/bin/node
 node_modules
 build
 npm-debug.log
