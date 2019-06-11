@@ -44,7 +44,8 @@ function addPercentage(tests) {
   const size = tests.length;
   const worstRes = tests[size - 1].execTime;
   const range = worstRes - bestRes;
-  tests.forEach(a => (a.percentage = ((a.execTime - bestRes) * 100) / range));
+  tests.forEach(a => (a.percentage = Math.ceil(
+    ((a.execTime - bestRes) * 100) / range)));
   return tests;
 }
 
