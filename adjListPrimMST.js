@@ -14,7 +14,6 @@ module.exports = function primAdjListMST(graph) {
       .filter(edge => visited.indexOf(edge[1]) === -1)
       .sort((a, b) => a[2] - b[2]);
     const minEdge = sorted.shift();
-    edges.splice(edges.indexOf(minEdge), 1);
     MST.push(minEdge);
     node = minEdge[1];
   }
